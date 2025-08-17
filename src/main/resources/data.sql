@@ -5,7 +5,7 @@ INSERT INTO roles (name, description) VALUES
 
 -- Create verified admin user (password: Admin123!)
 INSERT INTO users (username, email, password, first_name, email_verified, enabled, created_at) VALUES 
-('admin', 'admin@example.com', '$2a$12$LQv3c1yqBw2UKaOF.QiPp.8fJUh4vNI8ZRdkHOJqOg5z8.dNhCQOm', 'Admin', true, true, NOW());
+('admin', 'admin@todoapp.com', '$2a$10$iu6obXXCQZYq/kOn7Me/M.RKvk1ZizRX32y2Bzn.NomNzqv8IJY/a', 'Admin', true, true, NOW());
 
 -- Assign admin role
 INSERT INTO user_roles (user_id, role_id) 
