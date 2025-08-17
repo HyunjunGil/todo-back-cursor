@@ -43,6 +43,12 @@ jobs:
     - name: Make gradlew executable
       run: chmod +x ./gradlew
       
+    # 추가: base64로 인코딩된 application.properties 디코딩
+    - name: Create application.properties from secret
+      run: |
+        mkdir -p src/main/resources
+        echo "${{ secrets.APPLICATION_PROPERTIES_BASE64 }}" | base64 -d > src/main/resources/application.yml
+      
     - name: Test with Gradle
       run: ./gradlew test
       

@@ -62,3 +62,10 @@ logs/
 application-*.properties
 application-*.yml
 application-*.yaml
+
+### YAML Configuration Files ###
+src/main/resources/*.yml
+src/main/resources/*.yaml
+src/main/resources/application.yml
+src/main/resources/application-local.yml
+src/main/resources/result.yml
